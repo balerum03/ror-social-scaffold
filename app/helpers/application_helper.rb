@@ -15,8 +15,10 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
-    def add_friend_btn(user)
+
+  def add_friend_btn(user)
     return if current_user == user
+
     success_btn = 'btn btn-success mr-2'
     warning_btn = 'btn btn-warning'
     add_friendship_param = { friendship: { user_id: current_user, friend_id: user, confirmed: false } }
