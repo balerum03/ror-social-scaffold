@@ -17,7 +17,7 @@ RSpec.describe User do
     it 'is valid with valid attribute' do
       expect(subject).to be_valid
     end
-
+  end
   describe 'Associations', type: :model do
     it { is_expected.to have_many(:posts) }
     it { is_expected.to have_many(:comments) }
