@@ -40,6 +40,10 @@ class User < ApplicationRecord
   def friend?(user)
     friends.include?(user)
   end
+
+  def request_exists?(user)
+    true if pending_friends.include?(user) || friend_requests.include?(user)
+  end
 end
 # rubocop: enable Layout/Void
 # rubocop: enable Layout/ShadowingOuterLocalVariable
