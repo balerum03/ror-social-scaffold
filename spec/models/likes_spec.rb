@@ -15,9 +15,14 @@ RSpec.describe Like do
       expect(subject).to be_valid
     end
   end
-
-  describe 'Associations', type: :model do
-    it { is_expected.to belong_to(:user) }
-    it { is_expected.to belong_to(:post) }
+  describe Like do
+    it "Belongs to Post" do
+      test_case = Like.reflect_on_association(:post)
+      expect(test_case.macro).to eq(:belongs_to)
+    end
+    it "Belongs to User" do
+      test_case = Like.reflect_on_association(:user)
+      expect(test_case.macro).to eq(:belongs_to)
+    end
   end
 end
