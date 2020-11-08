@@ -46,8 +46,3 @@ RSpec.describe User do
     end
   end
 end
-
-# it "post has many likes" do
-#   test_case = Post.reflect_on_association(:likes)
-#   expect(test_case.macro).to eq(:has_many)
-# end
