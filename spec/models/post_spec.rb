@@ -10,15 +10,15 @@ RSpec.describe Post do
   end
 
   describe Post do
-    it "post belongs to User" do
+    it 'post belongs to User' do
       test_case = Post.reflect_on_association(:user)
       expect(test_case.macro).to eq(:belongs_to)
     end
-    it "post has many comments" do
+    it 'post has many comments' do
       test_case = Post.reflect_on_association(:comments)
       expect(test_case.macro).to eq(:has_many)
     end
-    it "post has many likes" do
+    it 'post has many likes' do
       test_case = Post.reflect_on_association(:likes)
       expect(test_case.macro).to eq(:has_many)
     end

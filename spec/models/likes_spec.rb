@@ -16,11 +16,11 @@ RSpec.describe Like do
     end
   end
   describe Like do
-    it "Belongs to Post" do
+    it 'Belongs to Post' do
       test_case = Like.reflect_on_association(:post)
       expect(test_case.macro).to eq(:belongs_to)
     end
-    it "Belongs to User" do
+    it 'Belongs to User' do
       test_case = Like.reflect_on_association(:user)
       expect(test_case.macro).to eq(:belongs_to)
     end

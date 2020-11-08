@@ -11,13 +11,13 @@ RSpec.describe User do
 
   describe 'presence of all fields on User' do
     it 'validates the presence of name' do
-       expect(subject.errors[:name]).to_not include("can't be black")
+      expect(subject.errors[:name]).to_not include("can't be black")
     end
     it 'validates the presence of email' do
-       expect(subject.errors[:email]).to_not include("can't be black")
+      expect(subject.errors[:email]).to_not include("can't be black")
     end
     it 'validates the presence of password' do
-       expect(subject.errors[:password]).to_not include("can't be black")
+      expect(subject.errors[:password]).to_not include("can't be black")
     end
     it 'is valid with valid attribute' do
       expect(subject).to be_valid
