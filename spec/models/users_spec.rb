@@ -5,24 +5,49 @@ RSpec.describe User do
     described_class.new(
       name: 'bbosa',
       email: 'bbosa2009@gmail.com',
-      password: '123'
+      password: '123456'
     )
   end
 
-  describe 'validations' do
-    it { is_expected.to validate_presence_of(:name) }
-    it { is_expected.to validate_presence_of(:email) }
-    it { is_expected.to validate_presence_of(:password) }
-
+  describe 'presence of all fields on User' do
+    it 'validates the presence of name' do
+       expect(subject.errors[:name]).to_not include("can't be black")
+    end
+    it 'validates the presence of email' do
+       expect(subject.errors[:email]).to_not include("can't be black")
+    end
+    it 'validates the presence of password' do
+       expect(subject.errors[:password]).to_not include("can't be black")
+    end
     it 'is valid with valid attribute' do
       expect(subject).to be_valid
     end
   end
   describe 'Associations', type: :model do
-    it { is_expected.to have_many(:posts) }
-    it { is_expected.to have_many(:comments) }
-    it { is_expected.to have_many(:likes) }
-    it { is_expected.to have_many(:friendships) }
-    it { is_expected.to have_many(:inverse_friendships) }
+    it 'user has many posts' do
+      test_case = User.reflect_on_association(:posts)
+      expect(test_case.macro).to eq(:has_many)
+    end
+    it 'user has many comments' do
+      test_case = User.reflect_on_association(:comments)
+      expect(test_case.macro).to eq(:has_many)
+    end
+    it 'user has many likes' do
+      test_case = User.reflect_on_association(:likes)
+      expect(test_case.macro).to eq(:has_many)
+    end
+    it 'user has many friendships' do
+      test_case = User.reflect_on_association(:friendships)
+      expect(test_case.macro).to eq(:has_many)
+    end
+    it 'user has many inverse friendships' do
+      test_case = User.reflect_on_association(:inverse_friendships)
+      expect(test_case.macro).to eq(:has_many)
+    end
   end
 end
+
+# it "post has many likes" do
+#   test_case = Post.reflect_on_association(:likes)
+#   expect(test_case.macro).to eq(:has_many)
+# end
