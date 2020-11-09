@@ -1,0 +1,22 @@
+current directory: /Users/mac/Desktop/ror-social-scaffold/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+/Users/mac/.rvm/rubies/ruby-2.7.0/bin/ruby -I /Users/mac/.rvm/rubies/ruby-2.7.0/lib/ruby/2.7.0 -r ./siteconf20201109-14866-50w07d.rb extconf.rb
+creating Makefile
+
+current directory: /Users/mac/Desktop/ror-social-scaffold/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/mac/Desktop/ror-social-scaffold/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+bootsnap.c:814:7: warning: incompatible pointer types passing 'VALUE (VALUE)' (aka 'unsigned long (unsigned long)') to parameter of type 'VALUE (*)(VALUE, VALUE)' (aka 'unsigned long (*)(unsigned long, unsigned long)') [-Wincompatible-pointer-types]
+      rescue_input_to_storage, Qnil,
+      ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/mac/.rvm/rubies/ruby-2.7.0/include/ruby-2.7.0/ruby/ruby.h:1988:47: note: passing argument to parameter here
+VALUE rb_rescue2(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE,...);
+                                              ^
+1 warning generated.
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/mac/Desktop/ror-social-scaffold/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.4.6/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20201109-14866-13970fx/bootsnap
