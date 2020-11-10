@@ -41,3 +41,5 @@ module ApplicationHelper
   end
 end
 # rubocop: enable Layout/LineLength
+# rubocop: enable Metrics/CyclomaticComplexity
+# rubocop: enable Metrics/PerceivedComplexity
