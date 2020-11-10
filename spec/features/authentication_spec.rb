@@ -1,4 +1,4 @@
-# rubocop: disable Layout/LineLength
+# rubocop: disable Layout/BlockLength
 require 'rails_helper'
 
 feature 'authentication features', type: :feature do
@@ -66,4 +66,4 @@ feature 'authentication features', type: :feature do
     end
   end
 end
-# rubocop: enable Layout/LineLength
+# rubocop: enable Layout/BlockLength

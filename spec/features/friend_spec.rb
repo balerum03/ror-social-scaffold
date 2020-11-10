@@ -1,4 +1,3 @@
-
 require 'rails_helper'
 
 feature 'Friend actions', type: :feature do

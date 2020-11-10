@@ -1,3 +1,4 @@
+# rubocop: disable Layout/BlockLength
 require 'rails_helper'
 
 feature 'Post actions', type: :feature do
@@ -41,3 +42,4 @@ feature 'Post actions', type: :feature do
     end
   end
 end
+# rubocop: enable Layout/BlockLength
