@@ -11,13 +11,13 @@ feature 'Post actions', type: :feature do
       click_on 'Log in'
     end
 
-    scenario 'viewing posts' do
+    scenario 'viewing the posts' do
       click_on 'Stay in touch'
       expect(page).to have_content('New post')
       expect(current_path).to eq('/')
     end
 
-    scenario 'adding new posts' do
+    scenario 'adding the new posts' do
       click_on 'Stay in touch'
       fill_in 'post[content]', with: 'A second post'
       click_on 'Save'
@@ -25,14 +25,14 @@ feature 'Post actions', type: :feature do
       expect(current_path).to eq('/posts')
     end
 
-    scenario 'liking new posts' do
+    scenario 'Liking the posts' do
       click_on 'Stay in touch'
       click_on 'Like!'
       expect(page).to have_content('You liked a post.')
       expect(current_path).to eq('/posts')
     end
 
-    scenario 'adding a comment' do
+    scenario 'commenting on a post' do
       click_on 'Stay in touch'
       fill_in 'comment[content]', with: 'Nice to meet you.'
       click_on 'Comment'

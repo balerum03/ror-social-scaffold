@@ -2,7 +2,7 @@
 require 'rails_helper'
 
 feature 'Friend actions', type: :feature do
-  feature 'add friend' do
+  feature 'a new friend' do
     before(:example) do
       user1 = User.create(name: 'adan', email: 'test@test.com', password: '123456')
       User.create(name: 'bbosa', email: 'test@test2.com', password: '123456')
