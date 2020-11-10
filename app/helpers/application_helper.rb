@@ -1,6 +1,6 @@
 # rubocop: disable Layout/LineLength
-# rubocop: desable Metrics/CyclomaticComplexity
-# rubocop: desable Metrics/PerceivedComplexity:
+# rubocop: disable Metrics/CyclomaticComplexity
+# rubocop: disable Metrics/PerceivedComplexity
 module ApplicationHelper
   def menu_link_to(link_text, link_path)
     class_name = current_page?(link_path) ? 'menu-item active' : 'menu-item'
