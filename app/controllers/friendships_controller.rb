@@ -1,4 +1,3 @@
-# rubocop: disable Style/GuardClause
 class FriendshipsController < ApplicationController
   def new
     @friendship = Friendship.new
@@ -18,11 +17,8 @@ class FriendshipsController < ApplicationController
   def show; end
 
   def update
-    @friendship = Friendship.find_by(id: params[:id])
-    if @friendship.confirmed == false && @friendship.update(confirmed: true)
-      redirect_to users_path
-      Friendship.create(user_id: @friendship.friend_id, friend_id: @friendship.user_id, confirmed: true)
-    end
+    @friendship = Friendship.find(params[:id])
+    redirect_to users_path if @friendship.confirmed == false && @friendship.confirm_friend
   end
 
   def destroy
@@ -45,4 +41,3 @@ class FriendshipsController < ApplicationController
     params.require(:friendship).permit(:user_id, :friend_id, :confirmed)
   end
 end
-# rubocop: enable Style/GuardClause
