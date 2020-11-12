@@ -18,7 +18,10 @@ class FriendshipsController < ApplicationController
 
   def update
     @friendship = Friendship.find_by(id: params[:id])
-    redirect_to users_path if @friendship.confirmed == false && @friendship.update(confirmed: true)
+    if @friendship.confirmed == false && @friendship.update(confirmed: true)
+      redirect_to users_path
+      Friendship.create(user_id: @friendship.friend_id, friend_id: @friendship.user_id, confirmed: true)
+    end
   end
 
   def destroy
