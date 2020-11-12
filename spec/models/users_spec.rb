@@ -17,7 +17,7 @@ RSpec.describe User do
       expect(subject.errors[:email]).to_not include("can't be black")
     end
     it 'The email must have the right format' do
-      subject.email = 'myemail'
+      subject.email = 'thisemail'
       expect(subject).not_to be_valid
     end
     it 'validates the presence of password' do
