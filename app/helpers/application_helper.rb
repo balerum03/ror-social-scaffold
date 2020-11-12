@@ -25,7 +25,7 @@ module ApplicationHelper
     success_btn = 'btn btn-success mr-2'
     warning_btn = 'btn btn-warning'
     add_friendship_param = { friendship: { user_id: current_user, friend_id: user, confirmed: false } }
-    delete_param = { id: find_friendship(user.id, current_user.id) }
+    delete_param = { id: user.id }
     friendship_true = find_friendship(user.id, current_user.id)
     if Friendship.where(user_id: user.id, friend_id: current_user.id, confirmed: false).exists?
       link = capture { link_to 'Accept Request', friendship_path(find_friendship(user.id, current_user.id)), method: :put, class: 'btn btn-success mr-2' }
