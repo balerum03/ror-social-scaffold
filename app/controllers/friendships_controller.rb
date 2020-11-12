@@ -1,3 +1,4 @@
+# rubocop: disable Style/GuardClause
 class FriendshipsController < ApplicationController
   def new
     @friendship = Friendship.new
@@ -44,3 +45,4 @@ class FriendshipsController < ApplicationController
     params.require(:friendship).permit(:user_id, :friend_id, :confirmed)
   end
 end
+# rubocop: enable Style/GuardClause
