@@ -5,10 +5,5 @@
     <ul class="posts">
       <%= render @posts %>
     </ul>
-    <%= @user_friends.each do |u| %>
-      <% if !find_friendship(current_user.id, u.id).nil? %>
-        <%= link_to 'hello', user_path(u.id) %>
-      <% end %>
-    <% end %>
   </article>
 </section>
