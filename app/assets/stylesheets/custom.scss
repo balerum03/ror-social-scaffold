@@ -155,6 +155,10 @@ form {
       padding: 8px;
       background-color: $primary-color-light;
     }
+
+    input[type="checkbox"] {
+      width: fit-content;
+    }
   }
 
   .actions {
