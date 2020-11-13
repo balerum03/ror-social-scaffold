@@ -65,13 +65,18 @@ Open `http://localhost:3000/` in your browser.
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
-### Deployment
-
-TBA
-
 ## Authors
 
-TBA
+👤 Bbosa Muhamood
+
+- Github: [@bmuhamood](https://github.com/bmuhamood)
+- Twitter: [@croixtechfirm](https://twitter.com/croixtechfirm)
+- Linkedin: [Bbosa Muhamood](https://www.linkedin.com/in/bbosa-muhamood-06845576/)
+
+👤 Adan Fernandez Bonilla
+ - Github: [@balerum03](https://github.com/balerum03)
+ - Twitter: [@balerum03](https://twitter.com/balerum03)
+ - Linkedin: [Adan Fernandez Bonilla](https://www.linkedin.com/in/adan-fernandez-bonilla/)
 
 ## 🤝 Contributing
 
@@ -82,11 +87,3 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-TBA
-
-## 📝 License
-
-TBA
